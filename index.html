@@ -2088,7 +2088,7 @@
             a static GitHub Pages website.
 
             Recipient:
-            hello@finexuspartners.com
+            laurencemott@aol.co.uk
 
             Redirect:
             https://laurencemott-art.github.io/Finexus/
@@ -2103,6 +2103,7 @@
             action="https://formsubmit.co/laurencemott@aol.co.uk"
             method="POST"
             enctype="multipart/form-data"
+            target="formSubmitFrame"
             id="candidateForm"
           >
 
@@ -2272,6 +2273,13 @@
 
 
           </form>
+
+          <iframe
+            name="formSubmitFrame"
+            id="formSubmitFrame"
+            title="Form submission"
+            style="display:none;"
+          ></iframe>
 
 
         </div>
@@ -2504,7 +2512,7 @@
           <div class="contact-button">
 
             <a
-              href="mailto:hello@finexuspartners.com"
+              href="mailto:tom@finexuspartners.com"
               class="button"
             >
 
@@ -2566,11 +2574,14 @@
       document.getElementById("candidate-cv");
 
 
+    const formSubmitFrame =
+      document.getElementById("formSubmitFrame");
+
+    let formSubmitted = false;
+
     candidateForm.addEventListener(
       "submit",
-      async function(event) {
-
-        event.preventDefault();
+      function(event) {
 
         const file =
           candidateCV.files[0];
@@ -2585,18 +2596,10 @@
           return;
         }
 
-
-        /*
-          Check file extension.
-        */
-
         const fileName =
           file.name.toLowerCase();
 
-        if (
-          !fileName.endsWith(".pdf")
-        ) {
-
+        if (!fileName.endsWith(".pdf")) {
           event.preventDefault();
 
           alert(
@@ -2607,18 +2610,11 @@
 
           return;
         }
-
-
-        /*
-          Check MIME type where the browser
-          provides it.
-        */
 
         if (
           file.type &&
           file.type !== "application/pdf"
         ) {
-
           event.preventDefault();
 
           alert(
@@ -2630,16 +2626,11 @@
           return;
         }
 
-
-        /*
-          FormSubmit has a combined upload
-          limit of 10MB.
-        */
-
         const maxSize =
           10 * 1024 * 1024;
 
         if (file.size > maxSize) {
+          event.preventDefault();
 
           alert(
             "Your CV is too large. Please upload a PDF smaller than 10MB."
@@ -2650,37 +2641,36 @@
           return;
         }
 
-        const submitButton = candidateForm.querySelector("button[type=\"submit\"]");
-        const originalButtonText = submitButton.innerHTML;
+        formSubmitted = true;
 
-        submitButton.disabled = true;
-        submitButton.innerHTML = "Submitting...";
+        const submitButton =
+          candidateForm.querySelector("button[type=\"submit\"]");
 
-        try {
-          const response = await fetch(candidateForm.action, {
-            method: "POST",
-            body: new FormData(candidateForm),
-            headers: {
-              "Accept": "application/json"
-            }
-          });
-
-          if (!response.ok) {
-            throw new Error("Submission failed");
-          }
-
-          candidateForm.innerHTML = `
-            <div class="form-success">
-              <h3>CV submitted successfully</h3>
-              <p>Thank you. Your CV has been submitted and we'll be in touch if there is a suitable opportunity.</p>
-            </div>
-          `;
-        } catch (error) {
-          submitButton.disabled = false;
-          submitButton.innerHTML = originalButtonText;
-          alert("There was a problem submitting your CV. Please try again.");
+        if (submitButton) {
+          submitButton.disabled = true;
+          submitButton.innerHTML =
+            'Submitting <span class="button-arrow">→</span>';
         }
+      }
+    );
 
+    formSubmitFrame.addEventListener(
+      "load",
+      function() {
+        if (!formSubmitted) return;
+
+        candidateForm.innerHTML = `
+          <div style="padding: 35px 0; border-top: 1px solid var(--border);">
+            <h3 style="font-size: 28px; font-weight: 400; color: var(--cream);">
+              CV submitted successfully
+            </h3>
+            <p style="margin-top: 12px; color: var(--cream-muted); font-size: 15px; line-height: 1.7;">
+              Thank you. Your CV has been submitted to Finexus Partners.
+            </p>
+          </div>
+        `;
+
+        formSubmitted = false;
       }
     );
 
