@@ -11,10 +11,10 @@
 
   <meta
     name="description"
-    content="Finexus Partners is a specialist search firm focused on FX, payments and financial technology"
+    content="Finexus Partners is a specialist search firm focused on FX, payments and FinTech"
   >
 
-  <title>Finexus Partners — FX · Payments · Technology</title>
+  <title>Finexus Partners — Specialist Search in FX, Payments & FinTech</title>
 
   <style>
 
@@ -294,12 +294,14 @@
     }
 
     .hero-description {
-      max-width: 540px;
-
+      max-width: 560px;
       color: var(--cream-muted);
-
       font-size: 17px;
       line-height: 1.75;
+    }
+
+    .hero-description p + p {
+      margin-top: 20px;
     }
 
     .hero-cta {
@@ -427,6 +429,24 @@
       within the expertise section.
     */
 
+    .expertise-intro {
+      max-width: 900px;
+      margin-bottom: 70px;
+    }
+
+    .expertise-heading {
+      max-width: 850px;
+      margin-top: 22px;
+      font-size: clamp(42px, 5.5vw, 76px);
+      font-weight: 400;
+      line-height: 1;
+      letter-spacing: -0.05em;
+    }
+
+    .expertise-heading span {
+      color: var(--gold);
+    }
+
     .expertise-grid {
       display: grid;
 
@@ -486,7 +506,7 @@
     }
 
     .card-description {
-      max-width: 340px;
+      max-width: 360px;
 
       margin-top: 22px;
 
@@ -494,6 +514,50 @@
 
       font-size: 14px;
       line-height: 1.8;
+    }
+
+    .role-intro {
+      max-width: 360px;
+      margin-top: 22px;
+      color: var(--cream-muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .role-list {
+      display: grid;
+      gap: 10px;
+      margin-top: 26px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .role-list li {
+      position: relative;
+      padding-left: 16px;
+      color: var(--cream);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .role-list li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .role-subhead {
+      margin-top: 28px;
+      color: var(--gold);
+      font-size: 10px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
     }
 
 
@@ -550,7 +614,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, 1fr);
 
       gap: 70px;
 
@@ -967,6 +1031,26 @@
       background: var(--gold);
     }
 
+
+
+    .form-success {
+      padding: 35px 0;
+      border-top: 1px solid var(--gold);
+    }
+
+    .form-success h3 {
+      font-size: 28px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+    }
+
+    .form-success p {
+      max-width: 520px;
+      margin-top: 16px;
+      color: var(--cream-muted);
+      font-size: 15px;
+      line-height: 1.8;
+    }
 
     /* =========================================
        TEAM
@@ -1554,25 +1638,17 @@
           </div>
 
           <h1>
-            Where exceptional
-            <em>talent</em> meets the
-            next opportunity
+            The people behind your
+            <em>next stage of growth</em>
           </h1>
 
           <div class="hero-bottom">
 
-            <p class="hero-description">
-
-              Finexus Partners is a specialist search firm
-              focused on FX, payments and financial
-              technology
-
-              <br><br>
-
-              We connect ambitious firms with people who
-              understand the markets they move in
-
-            </p>
+            <div class="hero-description">
+              <p>We connect ambitious firms with people who understand the markets they move in.</p>
+              <p>Finexus Partners is a specialist search firm focused on FX, payments and FinTech.</p>
+              <p>Our consultative approach starts with understanding your business. We work alongside you at every step to secure the people who will drive it forward.</p>
+            </div>
 
             <div class="hero-cta">
 
@@ -1580,7 +1656,7 @@
                 href="#contact"
                 class="button"
               >
-                Start a conversation
+                Partner with Finexus
 
                 <span class="button-arrow">
                   →
@@ -1621,8 +1697,8 @@
 
             <h2 class="intro-heading">
 
-              Built for the people
-              <span>shaping how money moves</span>
+              An extension of your team.
+              <span>Experts in our market.</span>
 
             </h2>
 
@@ -1646,64 +1722,58 @@
 
       <div class="container">
 
-        <!--
-          No large expertise title here.
-          The three specialist areas remain below.
-        -->
+        <div class="expertise-intro">
+          <div class="section-label">
+            Roles
+          </div>
+          <h2 class="expertise-heading">
+            The roles that <span>move businesses forward</span>
+          </h2>
+        </div>
 
         <div class="expertise-grid">
 
-
           <article class="expertise-card">
-
-            <h3 class="card-title">
-              FX Markets
-            </h3>
-
-            <p class="card-description">
-
-              Corporate and institutional FX,
-              trading, sales, product and
-              market infrastructure
-
-            </p>
-
+            <h3 class="card-title">Front Office</h3>
+            <p class="role-intro">Commercial and client-facing professionals who build relationships, develop revenue and keep businesses close to their markets.</p>
+            <div class="role-subhead">Focus areas</div>
+            <ul class="role-list">
+              <li>Business Development</li>
+              <li>Partnerships</li>
+              <li>Relationship Management</li>
+              <li>Dealing</li>
+            </ul>
           </article>
 
-
           <article class="expertise-card">
-
-            <h3 class="card-title">
-              Payments
-            </h3>
-
-            <p class="card-description">
-
-              Acquiring, issuing, embedded finance,
-              payment technology and the infrastructure
-              behind modern money movement
-
-            </p>
-
+            <h3 class="card-title">Middle Office</h3>
+            <p class="role-intro">Specialists who support the systems, products and processes that allow ambitious businesses to scale effectively.</p>
+            <div class="role-subhead">Focus areas</div>
+            <ul class="role-list">
+              <li>Operations</li>
+              <li>Product</li>
+              <li>Project</li>
+              <li>Compliance</li>
+            </ul>
           </article>
 
-
           <article class="expertise-card">
-
-            <h3 class="card-title">
-              Leadership & Growth
-            </h3>
-
-            <p class="card-description">
-
-              Commercial leaders, senior specialists
-              and operators ready to build the next
-              phase of ambitious businesses
-
-            </p>
-
+            <h3 class="card-title">Executive Search</h3>
+            <p class="role-intro">Executive and non-executive search from CEO to COO and across critical leadership functions</p>
+            <div class="role-subhead">Leadership functions</div>
+            <ul class="role-list">
+              <li>Chief Executive Officer</li>
+              <li>Product & Technology</li>
+              <li>Finance & Revenue</li>
+              <li>Compliance & Risk</li>
+              <li>Marketing</li>
+              <li>Chief of Staff</li>
+            </ul>
+            <div class="role-subhead">Non-executive</div>
+            <ul class="role-list">
+              <li>Chairman</li>
+            </ul>
           </article>
-
 
         </div>
 
@@ -1731,17 +1801,14 @@
 
           <h2>
 
-            Recruitment advice
-            with the <span>long view</span>
-            in mind
+            Advice with a <span>long-term perspective</span>,
+            built on trust and transparency.
 
           </h2>
 
           <p class="approach-lead">
 
-            The best outcomes come from thoughtful
-            conversations, honest advice and partnerships
-            built to last
+            
 
           </p>
 
@@ -1759,11 +1826,11 @@
 
             <p>
 
-              We start with the context behind the brief.
-              Understanding your business, your team,
-              your ambitions and the market around you
-              allows us to make recommendations that are
-              considered, relevant and practical.
+              We know these markets inside out. Our
+              consultative approach brings that expertise
+              into your business, working as an extension of
+              your team to understand your priorities, advise
+              with confidence and shape the right search.
 
             </p>
 
@@ -1773,39 +1840,22 @@
           <article class="approach-card">
 
             <h3>
-              Best intentions, always
+              Partnerships built on results
             </h3>
 
             <p>
 
-              Our advice is direct, discreet and grounded
-              in what we believe is right for both sides.
-              We take the time to understand motivations,
-              expectations and long-term objectives so that
-              every conversation has genuine purpose.
+              Our clients choose to work with us time and
+              again. We earn that confidence through
+              successful, honest advice and a clear
+              understanding of their business and the market,
+              supporting their ambitions as they grow.
 
             </p>
 
           </article>
 
 
-          <article class="approach-card">
-
-            <h3>
-              Relationships that endure
-            </h3>
-
-            <p>
-
-              The strongest partnerships are built over time.
-              We are here for the mandate that matters today,
-              the career move that comes next and the market
-              conversation that may lead somewhere further
-              down the line.
-
-            </p>
-
-          </article>
 
 
         </div>
@@ -1841,7 +1891,7 @@
 
           <p>
 
-            We work closely with businesses from the
+            We work closely with our partners from the
             initial conversation through to securing the
             right candidate.
 
@@ -1864,15 +1914,12 @@
             <div class="timeline-content">
 
               <h3>
-                Partner with and consult with businesses
+                Consult
               </h3>
 
               <p>
 
-                We begin by partnering closely with the
-                business, taking the time to understand the
-                wider context behind the requirement and
-                providing informed recruitment advice.
+                Understand your business, priorities and the brief.
 
               </p>
 
@@ -1892,15 +1939,12 @@
             <div class="timeline-content">
 
               <h3>
-                Learn the business and understand the need
+                Map
               </h3>
 
               <p>
 
-                We learn how the business operates, understand
-                its needs and objectives, and establish exactly
-                what it wants to achieve. This gives us the
-                clarity needed to define the right profile.
+                Identify the target businesses and talent across our market.
 
               </p>
 
@@ -1920,15 +1964,12 @@
             <div class="timeline-content">
 
               <h3>
-                Targeted headhunting
+                Qualify
               </h3>
 
               <p>
 
-                With the brief and objectives clearly defined,
-                we undertake targeted headhunting to identify
-                individuals whose experience, capabilities and
-                ambitions align with the business and its goals.
+                Headhunt and assess individuals against the brief.
 
               </p>
 
@@ -1948,15 +1989,37 @@
             <div class="timeline-content">
 
               <h3>
-                Manage interviews, negotiations and securing the right candidate
+                Introduce
               </h3>
 
               <p>
 
-                We manage the process through interviews,
-                feedback and negotiations, maintaining momentum
-                and supporting both sides through to securing
-                the right candidate.
+                Present a focused shortlist and coordinate interviews.
+
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <!-- STEP 5 -->
+
+          <div class="timeline-item">
+
+            <div class="timeline-number">
+              05
+            </div>
+
+            <div class="timeline-content">
+
+              <h3>
+                Secure
+              </h3>
+
+              <p>
+
+                Manage negotiations through to an accepted offer.
 
               </p>
 
@@ -2037,7 +2100,7 @@
 
           <form
             class="candidate-form"
-            action="https://formsubmit.co/hello@finexuspartners.com"
+            action="https://formsubmit.co/laurencemott@aol.co.uk"
             method="POST"
             enctype="multipart/form-data"
             id="candidateForm"
@@ -2059,12 +2122,6 @@
               type="hidden"
               name="_captcha"
               value="true"
-            >
-
-            <input
-              type="hidden"
-              name="_next"
-              value="https://laurencemott-art.github.io/Finexus/"
             >
 
 
@@ -2251,8 +2308,8 @@
 
             <h2 class="team-heading">
 
-              Specialist knowledge
-              <span>Market perspective</span>
+              An extension of your team.
+              <span>Experts in our market.</span>
 
             </h2>
 
@@ -2378,16 +2435,15 @@
             <p class="team-card-bio">
 
               Tom specialises in sales and middle-office
-              appointments across the global FX and
-              payments industry
+              appointments across the global FX and payments
+              industry.
 
               <br><br>
 
-              With experience delivering appointments
-              from emerging talent through to senior
-              leadership, he brings a detailed understanding
-              of the people and capabilities that keep
-              businesses moving
+              With experience delivering appointments from
+              emerging talent through to senior leadership,
+              he brings a detailed understanding of the people
+              and capabilities that keep businesses moving.
 
             </p>
 
@@ -2512,7 +2568,9 @@
 
     candidateForm.addEventListener(
       "submit",
-      function(event) {
+      async function(event) {
+
+        event.preventDefault();
 
         const file =
           candidateCV.files[0];
@@ -2583,8 +2641,6 @@
 
         if (file.size > maxSize) {
 
-          event.preventDefault();
-
           alert(
             "Your CV is too large. Please upload a PDF smaller than 10MB."
           );
@@ -2592,6 +2648,37 @@
           candidateCV.value = "";
 
           return;
+        }
+
+        const submitButton = candidateForm.querySelector("button[type=\"submit\"]");
+        const originalButtonText = submitButton.innerHTML;
+
+        submitButton.disabled = true;
+        submitButton.innerHTML = "Submitting...";
+
+        try {
+          const response = await fetch(candidateForm.action, {
+            method: "POST",
+            body: new FormData(candidateForm),
+            headers: {
+              "Accept": "application/json"
+            }
+          });
+
+          if (!response.ok) {
+            throw new Error("Submission failed");
+          }
+
+          candidateForm.innerHTML = `
+            <div class="form-success">
+              <h3>CV submitted successfully</h3>
+              <p>Thank you. Your CV has been submitted and we'll be in touch if there is a suitable opportunity.</p>
+            </div>
+          `;
+        } catch (error) {
+          submitButton.disabled = false;
+          submitButton.innerHTML = originalButtonText;
+          alert("There was a problem submitting your CV. Please try again.");
         }
 
       }
