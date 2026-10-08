@@ -2100,7 +2100,7 @@
 
           <form
             class="candidate-form"
-            action="https://formsubmit.co/laurencemott8@gmail.com"
+            action="https://formsubmit.co/laurencemott@aol.co.uk"
             method="POST"
             enctype="multipart/form-data"
             target="formSubmitFrame"
@@ -2123,6 +2123,13 @@
               type="hidden"
               name="_captcha"
               value="true"
+            >
+
+            <input
+              type="hidden"
+              name="_replyto"
+              value=""
+              id="formReplyTo"
             >
 
 
@@ -2639,6 +2646,14 @@
           candidateCV.value = "";
 
           return;
+        }
+
+        const replyToField =
+          document.getElementById("formReplyTo");
+
+        if (replyToField) {
+          replyToField.value =
+            document.getElementById("candidate-email").value;
         }
 
         formSubmitted = true;
